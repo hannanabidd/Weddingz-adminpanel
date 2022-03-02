@@ -1,13 +1,229 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;400;500;600&display=swap');
+body{
+  margin:0;
+  padding:0;
+  box-sizing: border-box;
+}
+h1, h2, h3, h4, h5, h6, p{
+  font-family: 'Poppins', sans-serif;
+  letter-spacing: -0.4px;
+  color:#333333;
+}
+p{
+  margin-bottom: 0px !important;
+}
+a{
+  text-decoration: none !important;
+}
+.flex-vh-center{
+  display:flex;
+  align-items: center;
+  justify-content: center;
+}
+.flex-vh-center-column{
+  display:flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+.lg-headings{
+  font-size: 40px;
+  line-height: 60px;
+  text-align: center;
+  font-weight: 600;
+  margin-bottom: 70px;
+}
+.bubble-span{
+  color:#FF6085;
+}
+.normal-section{
+  padding:120px 0px;
+}
+.normal-top-section{
+  padding-top:120px;
+}
+.grey-section{
+  background-color: #ededed;
+}
+.view-more-btnn{
+  background-color: #FF6085;
+  border:1px solid #FF6085;
+  width: 250px;
+  border-radius: 10px;
+  padding:20px 35px;
+  text-align: center;
+  color:white;
+  font-family: 'Poppins', sans-serif;
+  letter-spacing: -0.4px;
+  font-weight: 500;
+  margin-bottom: 0px;
+  margin-top:60px;
+  transition: 0.3s;
+  outline:none;
+  /* margin-left: 40%; */
+  margin-right: 40%;
+}
+.create-venue-btn{
+  background-color: #FF6085;
+  border:1px solid #FF6085;
+  width: 250px;
+  border-radius: 10px;
+  padding:20px 35px;
+  text-align: center;
+  color:white;
+  font-family: 'Poppins', sans-serif;
+  letter-spacing: -0.4px;
+  font-weight: 500;
+  margin-bottom: 0px;
+  margin-top:60px;
+  transition: 0.3s;
+  outline:none;
+  margin-left: 40%;
+  /* margin-right: 40%; */
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+.view-more-btn{
+  background-color: #FF6085;
+  border:1px solid #FF6085;
+  width: 250px;
+  border-radius: 10px;
+  padding:20px 35px;
+  text-align: center;
+  color:white;
+  font-family: 'Poppins', sans-serif;
+  letter-spacing: -0.4px;
+  font-weight: 500;
+  margin-bottom: 0px;
+  margin-top:60px;
+  transition: 0.3s;
+  outline:none;
+  margin-left: 10%
+  
+}
+.v-button{
+  display:flex;
+  margin-top: 20px;
+  
+  
+}
+.view-more-btn:hover{
+  background-color: #ee3d66;
+}
+.view-more-btnn:hover{
+  background-color: #ee3d66;
+}
+.create-venue-btn:hover{
+  background-color: #ee3d66;
+}
+.black-line{
+  height:1px;
+  background-color: #333333;
+  width: 80%;
+  margin:40px 0px;
+}
+.admin-h1{
+  display: flex;
+  flex-direction: row;
+  margin-top: 20vh;
+  font-size: 50px;
+}
+.admin-p{
+  font-size: 25px;
+}
+.heading{
+  text-align: center;
+  margin-top: 100px;
+}
+.options-select{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.h1-v{
+  font-size: 70px;
+  margin-top: 50px;
+  margin-bottom: 50px;
+}
+.form-control-venue{
+  border-color: #ee3d66;
+  width: 200px;
+  height: 50px;
+  border-radius: 10px
+}
+
+.venue-select{
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  
+}
+.venue-p{
+  font-size: 20px;
+  margin-top: 50px;
+}
+
+.login-heading{
+  font-size: 40px;
+  line-height: 60px;
+  text-align: left;
+  font-weight: 600;
+  margin-bottom: 70px;
+  font-family: 'Poppins', sans-serif;
+}
+.login-email{
+  background-color: white;
+  border-radius: 10px;
+  border:1px solid #FF6085;
+  padding:20px;
+  font-size: 16px;
+  outline: none;
+  transition: 0.3s;
+  margin-bottom: 30px;
+}
+.login-email:last-child{
+  margin-bottom: 0px;
+}
+.login-email:focus-visible{
+  outline:1px solid #ed2b58;
+}
+
+#form-overlay {
+  position: fixed; /* Sit on top of the page content */
+  display: none; /* Hidden by default */
+  width: 100%; /* Full width (cover the whole page) */
+  height: 100%; /* Full height (cover the whole page) */
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0,0,0,0.5); /* Black background with opacity */
+  z-index: 2; /* Specify a stack order in case you're using a different order for other elements */
+  cursor: pointer; /* Add a pointer on hover */
+}
+.loader {
+  border: 4px solid #f3f3f3;
+  border-radius: 50%;
+  border-top:4px solid #3498db;
+  width: 60px;
+  height: 60px;
+  -webkit-animation: spin 2s linear infinite;
+  animation: spin 2s linear infinite;
+}
+
+@-webkit-keyframes spin {
+  0% { -webkit-transform: rotate(0deg); }
+  100% { -webkit-transform: rotate(360deg); }
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+.footer-line{
+  height:2px;
+  width: 50%;
+  border-radius: 1px;
+  background-color:black;
+  margin-top:40px;
+  margin-left: 26%;
 }
